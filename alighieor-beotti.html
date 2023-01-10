@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Germano Celant</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
     <header>
@@ -18,6 +20,42 @@
             oeuvres sur papier, qui ont souvent exploré des thèmes tels que la langue, l'identité et la politique. Boetti a également été impliqué dans des projets de collaboration avec des 
             artistes et des artisans du Moyen-Orient et d'Afrique, et a été considéré comme l'un des principaux représentants de l'arte povera.</p>
     </article>
+    <div class="carrousel" x-data="{
+        hrefCourant: '#ecran-1',
+        }">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">
+            &lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
+            aria-label="slide
+                suivant">></button>
+        <div class="carrousel_parent-ecrans" x-ref="parent">
+        <a href="game-plan.html">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/game-plan.webp" alt="Game Plan">
+                    <figcaption>Game Plan</figcaption>
+                </figure>
+        </a>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+        <a href="game-plan.html">
+                <figure>
+                    <img src="public/img/Legnetti-colorati.webp" alt="Lagnetti-colorati">
+                    <figcaption>Lagnetti-colorati</figcaption>
+                </figure>
+        </a>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+        <a href="game-plan.html">
+                <figure>
+                    <img src="public/img/Catasta.webp" alt="Catasta">
+                    <figcaption>Catasta</figcaption>
+                </figure>
+        </a>
+            </div>
+        </div>
+    </div>
     <a href="">
         <button class="btn-retour">RETOUR</button>
     </a>
