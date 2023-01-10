@@ -1,0 +1,18 @@
+/* Color styles */
+--gris: rgba(106, 100, 90, 1);
+--beige: rgba(227, 205, 139, 1);
+--vert: rgba(93, 112, 82, 1);
+--orange: rgba(193, 136, 69, 1);
+--beige-foncee: rgba(240, 190, 134, 1);
+--blanc: rgba(255, 255, 255, 1);
+
+/* Text-size styles */
+--titre: 36px;
+--sous-titre: 24px;
+--article: 16px;
+--description: 12px;
+--header-title: 20px;
+--texte-footer: 16px;
+--texte--menu: 32px;
+--texte-caroussel: 12px;
+--titre--artiste: 28px;
