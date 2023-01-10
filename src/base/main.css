@@ -18,9 +18,33 @@
     color: var(--beige);
 }
 
-.chronologie::after {
-    width: 50px;
-    height: 50px;
-    color: black;
-    position: relative;
+.chronologie {
+    background-color: var(--gris);
+    padding: 5px;
+}
+
+.chronologie img {
+    border: 3px solid var(--beige-foncee);
+    border-radius: 200px;
+    margin-left: 5%;
+    width: 121px;
+    height: 121px;
+}
+
+.chronologie h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.chronologie h3 {
+    font-family: 'HelveticaNeue';
+    font-size: var(--sous-titre);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    color: var(--beige);
+    line-height: 110%;
+    font-weight: 400;
 }
