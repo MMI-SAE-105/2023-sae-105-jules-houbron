@@ -18,6 +18,42 @@
         mettait en avant l'utilisation de matériaux simples et pauvres dans l'art. Anselmo a travaillé avec de nombreux médiums, y compris la sculpture, la photographie et l'installation, 
         et a été reconnu pour son travail explorant les thèmes de la perception, de la mesure et de l'espace.</p>
     </article>
+    <div class="carrousel" x-data="{
+        hrefCourant: '#ecran-1',
+        }">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">
+            &lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
+            aria-label="slide
+                suivant">></button>
+        <div class="carrousel_parent-ecrans" x-ref="parent">
+        <a href="specchio.html">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Specchio.webp" alt="Specchio">
+                    <figcaption>Specchio</figcaption>
+                </figure>
+        </a>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+        <a href="verso-linfito.html">
+                <figure>
+                    <img src="public/img/verso-linfinito.webp" alt="Verso l’infito">
+                    <figcaption>Verso l’infito</figcaption>
+                </figure>
+        </a>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+        <a href="direzione.html">
+                <figure>
+                    <img src="public/img/Direzione.webp" alt="Direzione">
+                    <figcaption>Direzione</figcaption>
+                </figure>
+        </a>
+            </div>
+        </div>
+    </div>
     <a href="">
         <button class="btn-retour">RETOUR</button>
     </a>
