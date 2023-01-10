@@ -9,7 +9,25 @@
 <body>
     <header>
         <h4 class="header-title">VAGABOND</h4>
+        <button aria-controls="mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+        >
         <div class="nav-bar"></div>
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen"
+        x-transition.duration.800ms
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90"
+        class="menu"
+        >
+          <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">BILLETERIE</a></li>
+            <li><a href="#">ARTISTES</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
     </header>
     <img src="public/img/img1-index.webp" alt="Exemple d'Arte Povera">
     <article>
