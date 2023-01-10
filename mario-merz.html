@@ -19,6 +19,42 @@
         (des structures en verre et en métal qui évoquent des igloos), "Fibonacci" (des séries de chiffres qui suivent la suite de Fibonacci) et "Casa Cascata" (une maison construite avec des 
         matériaux naturels et suspendue dans les arbres).</p>
     </article>
+    <div class="carrousel" x-data="{
+        hrefCourant: '#ecran-1',
+        }">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">
+            &lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
+            aria-label="slide
+                suivant">></button>
+        <div class="carrousel_parent-ecrans" x-ref="parent">
+        <a href="Giaps-Igloo.html">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Giaps-Igloo.webp" alt="Giap’s Igloo">
+                    <figcaption>Giap’s Igloo</figcaption>
+                </figure>
+        </a>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+        <a href="Igloo-di-pietra.html">
+                <figure>
+                    <img src="public/img/Igloo-di-pietra.webp" alt="Igloo di pietra">
+                    <figcaption>Igloo di pietra</figcaption>
+                </figure>
+        </a>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+        <a href="Lingotto.html">
+                <figure>
+                    <img src="public/img/Lingotto.webp" alt="Lingotto">
+                    <figcaption>Lingotto</figcaption>
+                </figure>
+        </a>
+            </div>
+        </div>
+    </div>
     <a href="">
         <button class="btn-retour">RETOUR</button>
     </a>
