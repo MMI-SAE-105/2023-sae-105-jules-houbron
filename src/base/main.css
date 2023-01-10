@@ -1,0 +1,26 @@
+.index {
+    background-color: var(--vert);
+}
+
+.index p {
+    font-family: 'HelveticaNeue';
+    font-size: var(--article);
+    margin-left: 5%;
+    margin-right: 5%;
+    color: var(--beige);
+}
+
+.index h2 {
+    font-family: 'HelveticaNeue';
+    font-size: var(--titre);
+    margin-left: 5%;
+    margin-right: 5%;
+    color: var(--beige);
+}
+
+.chronologie::after {
+    width: 50px;
+    height: 50px;
+    color: black;
+    position: relative;
+}

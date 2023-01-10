@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
+<body class="index">
     <header>
         <h4 class="header-title">VAGABOND</h4>
         <button aria-controls="mainNav"
         @click="menuIsOpen = ! menuIsOpen"
         class="header_menuBtn"
         >
+        <img src="public/img/BOUTON-MENU.svg" alt="">
         </button>
         <nav id="mainNav" x-show="menuIsOpen"
         x-transition.duration.800ms
@@ -28,7 +29,7 @@
           </ul>
         </nav>
     </header>
-    <img src="public/img/img1-index.webp" alt="Exemple d'Arte Povera">
+    <img class="img-exemple" src="public/img/img1-index.webp" alt="Exemple d'Arte Povera">
     <article>
     <h2>ARTE POVERA</h2>
     <p>L'arte povera est un mouvement artistique italien qui a émergé dans les années 1960 et qui a été caractérisé par l'utilisation de matériaux simples et courants dans la création 
@@ -37,8 +38,8 @@
     ont également été influencés par des mouvements tels que le minimalisme et le conceptuelisme, et ont utilisé des performances et des installations pour créer des oeuvres qui questionnaient
     les structures sociales et culturelles en place.</p>
     </article>
+    <article class="chronologie">
     <h2>CHRONOLOGIE</h2>
-    <article>
         <img src="public/img/germano-celant.webp" alt="Germano Celant">
         <h3>Germano Celant</h3>
         <h3>1967</h3>
@@ -95,7 +96,7 @@
             <button class="btn-info">Informations</button>
         </a>
     </article>
-    <img src="public/img/img2-index.webp" alt="Exemple d'arte Povera">
+    <img class="img-exemple" src="public/img/img2-index.webp" alt="Exemple d'arte Povera">
     <article>
         <h2>VAGABOND</h2>
         <p>Venez découvrir l'exposition "Vagabond" au Fondation Cartier du 13 avril au 23 juin 2021 ! Cette exposition de l'Arte Povera vous emmènera à la découverte d'oeuvres uniques et originales, qui explorent les liens entre l'homme et la nature.

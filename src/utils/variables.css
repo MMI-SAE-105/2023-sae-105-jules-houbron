@@ -1,3 +1,4 @@
+:root {
 /* Color styles */
 --gris: rgba(106, 100, 90, 1);
 --beige: rgba(227, 205, 139, 1);
@@ -16,3 +17,4 @@
 --texte--menu: 32px;
 --texte-caroussel: 12px;
 --titre--artiste: 28px;
+}
