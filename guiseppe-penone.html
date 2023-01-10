@@ -19,6 +19,42 @@
         plus connues, on peut citer "Albero che cammina" (un arbre qui semble marcher), "Espace Indéterminé" (une installation dans laquelle un arbre pousse à travers une plaque de verre) et 
         "L'Anello di fidanzamento" (un anneau en or suspendu dans un arbre).</p>
     </article>
+    <div class="carrousel" x-data="{
+        hrefCourant: '#ecran-1',
+        }">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">
+            &lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
+            aria-label="slide
+                suivant">></button>
+        <div class="carrousel_parent-ecrans" x-ref="parent">
+        <a href="patate.html">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/patate.webp" alt="Patate">
+                    <figcaption>Patate</figcaption>
+                </figure>
+        </a>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+        <a href="arbre-main.html">
+                <figure>
+                    <img src="public/img/arbre-main.webp" alt="TRATTENERE 8 ANNI DI CRESCITA">
+                    <figcaption>TRATTENERE 8 ANNI DI CRESCITA</figcaption>
+                </figure>
+        </a>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+        <a href="ecorce.html">
+                <figure>
+                    <img src="public/img/ecorce.webp" alt="LTRA SCORZA ET SCORZA">
+                    <figcaption>TRA SCORZA ET SCORZA</figcaption>
+                </figure>
+        </a>
+            </div>
+        </div>
+    </div>
     <a href="">
         <button class="btn-retour">RETOUR</button>
     </a>
