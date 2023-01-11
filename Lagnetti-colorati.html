@@ -1,28 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Germano Celant</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
     <header>
         <h4 class="header-title">VAGABOND</h4>
-        <div class="nav-bar"></div>
+        <button aria-controls="mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+        >
+        <img src="public/img/BOUTON-MENU.svg" alt="">
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen"
+        x-transition.duration.800ms
+        class="menu"
+        >
+          <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">BILLETERIE</a></li>
+            <li><a href="#">ARTISTES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
     </header>
-    <h1>Legnetti-colorati</h1>
+    <section class="oeuvre">
+    <h2>Legnetti-colorati</h2>
+    <div class="img-oeuvre">
     <img src="public/img/Legnetti-colorati.webp" alt="Legnetti-colorati">
+    </div>
     <p>Il s'agit d'une série de sculptures en bois peintes dans des couleurs vives et disposées sur le sol ou sur des supports. 
     Chaque sculpture est constituée d'une forme géométrique simple, comme un cercle, un carré ou un triangle, et est peinte d'une seule couleur. </p>
-    <a href="alighieor-beotti.html">
-        <button class="btn-retour">RETOUR</button>
-    </a>
+    <div class="btn-retour">
+        <button><a href="alighieor-beotti.html">RETOUR</a></button>
+    </div>
+    </section>
     <footer>
-        <h1>VAGABOND</h1>
-        <H3>CONTACT</H3>
-        <H3>BILLETERIE</H3>
-        <p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
+        <div class="parent-footer">
+            <div class="div1-footer"><h1>VAGABOND</h1> </div>
+            <div class="div2-footer">
+                <a href="contact.html">CONTACT</a> 
+                <a href="">BILLETERIE</a>
+            </div>
+            <div class="div3-footer"><p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p> </div>
+            </div>
+        </section>
     </footer>
 </body>
 </html>
