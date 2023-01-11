@@ -26,6 +26,40 @@ header {
     letter-spacing: 0.2em;
 }
 
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--gris);
+    display: grid;
+    place-content: center;
+    }
+
+.header_menuBtn {
+      z-index: 10;
+    }
+
+.noscroll,
+.noscroll body {
+      overflow: hidden;
+    }
+
+.menu li {
+    list-style: none;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 110%;
+    letter-spacing: 0.05em;
+    display: flex;
+    text-align: center;
+}
+
+
 .btn-info {
     width: 164px;
     height: 41px;
