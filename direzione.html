@@ -1,27 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direzione</title>
+<link rel="stylesheet" href="src/css/style.css">
+<script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
-    <header>
-        <h4 class="header-title">VAGABOND</h4>
-        <div class="nav-bar"></div>
-    </header>
-    <h1>Specchio</h1>
-    <img src="public/img/Direzione.webp alt="Direzione">
+<header>
+    <h4 class="header-title">VAGABOND</h4>
+    <button aria-controls="mainNav"
+    @click="menuIsOpen = ! menuIsOpen"
+    class="header_menuBtn"
+    >
+    <img src="public/img/BOUTON-MENU.svg" alt="">
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen"
+    x-transition.duration.800ms
+    class="menu"
+    >
+      <ul>
+        <li><a href="#">ACCUEIL</a></li>
+        <li><a href="#">BILLETERIE</a></li>
+        <li><a href="#">ARTISTES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+</header>
+<section class="oeuvre">
+<h2>Direzione</h2>
+<div class="img-oeuvre">
+<img src="public/img/Direzione.webp" alt="direzione">
+</div>
     <p>""Direzione" (Direction) est une sculpture de Giovanni Anselmo créée en 1975. Il s'agit d'une sculpture en acier qui se présente comme un panneau d'acier vertical, fixé au mur, avec une flèche en acier qui pointe vers le haut.</p>
-    <a href="giovanni-anselmo.html">
-        <button class="btn-retour">RETOUR</button>
-    </a>
+    <div class="btn-retour">
+        <button><a href="giovanni-anselmo.html">RETOUR</a></button>
+    </div>
+    </section>
     <footer>
-        <h1>VAGABOND</h1>
-        <H3>CONTACT</H3>
-        <H3>BILLETERIE</H3>
-        <p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
+        <div class="parent-footer">
+            <div class="div1-footer"><h1>VAGABOND</h1> </div>
+            <div class="div2-footer">
+                <a href="contact.html">CONTACT</a> 
+                <a href="">BILLETERIE</a>
+            </div>
+            <div class="div3-footer"><p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p> </div>
+            </div>
+        </section>
     </footer>
 </body>
+</html>
 </html>
