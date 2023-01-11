@@ -1,28 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Germano Celant</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
     <header>
         <h4 class="header-title">VAGABOND</h4>
-        <div class="nav-bar"></div>
+        <button aria-controls="mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+        >
+        <img src="public/img/BOUTON-MENU.svg" alt="">
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen"
+        x-transition.duration.800ms
+        class="menu"
+        >
+          <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">BILLETERIE</a></li>
+            <li><a href="#">ARTISTES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
     </header>
-    <h1>TRATTENERE 8 ANNI DI CRESCITA</h1>
-    <img src="public/img/arbre-main.webp alt="TRATTENERE 8 ANNI DI CRESCITA">
+    <section class="oeuvre">
+    <h2>TRATTENERE 8 ANNI DI CRESCITA</h2>
+    <div class="img-oeuvre">
+    <img src="public/img/arbre-main.webp" alt="TRATTENERE 8 ANNI DI CRESCITA">
+    </div>
     <p>"Arbre-main" est une sculpture de l'artiste italien Giuseppe Penone, associé au mouvement de l'arte povera. La sculpture est en bronze coulé et représente généralement une main de bronze coulé de 
         l'artiste elle-même tenant une branche d'arbre.</p>
-    <a href="guiseppe-penone.html">
-        <button class="btn-retour">RETOUR</button>
-    </a>
-    <footer>
-        <h1>VAGABOND</h1>
-        <H3>CONTACT</H3>
-        <H3>BILLETERIE</H3>
-        <p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
-    </footer>
-</body>
+        <div class="btn-retour">
+            <button><a href="guiseppe-penone.html">RETOUR</a></button>
+        </div>
+        </section>
+        <footer>
+            <div class="parent-footer">
+                <div class="div1-footer"><h1>VAGABOND</h1> </div>
+                <div class="div2-footer">
+                    <a href="contact.html">CONTACT</a> 
+                    <a href="">BILLETERIE</a>
+                </div>
+                <div class="div3-footer"><p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p> </div>
+                </div>
+            </section>
+        </footer>
+    </body>
 </html>
