@@ -1,78 +1,3 @@
-/* en vrac :
-100% 100% 0 $  
- flex  
- width width
-*/
-* {
-    /* change le box model */
-    box-sizing: border-box;
-
-
-}
-
-img {
-    /* image responsive, largeur maxi */
-    height: 100%;
-    max-width: auto;
-    /* hauteur "auto" */
-
-}
-
-.carrousel_parent-ecrans {
-    /* aligne horizontalement les enfants */
-    display: flex;
-    /* largeur du parent */
-    width: 100%;
-    overflow-x: scroll;
-    /* permet de scroller horizontalement */
-    scroll-snap-type: x mandatory;
-    /* permet de scroller par blocs */
-
-}
-
-.carrousel_ecran {
-    /* largeur du parent pour chaque enfant */
-    width: 100%;
-    /* permet de garder toute la largeur du parent */
-    scroll-snap-align: start;
-    /* aligne les enfants par blocs */
-}
-
-.carrousel_ecran figure {
-    /* enlève les marges par défaut */
-    margin: none;
-    scroll-snap-align: start;
-    /* aligne les enfants par blocs */
-}
-
-.carrousel {
-    position: relative;
-}
-
-.carrousel_btn {
-    position: absolute;
-    top: 50%;
-    /* centre verticalement */
-    transform: translateY(-50%);
-    /* methode du point mort */
-    width: 2rem;
-    height: 2rem;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    border: none;
-    display: grid;
-    place-content: center;
-    color: #fff;
-}
-
-.carrousel_btn-avant {
-    left: 0;
-}
-
-.carrousel_btn-apres {
-    right: 0;
-}
-
 .header_menuBtn {
     height: 25px;
     width: 20px;
@@ -101,6 +26,141 @@ header {
     letter-spacing: 0.2em;
 }
 
-.img-exemple {
-    width: 100%;
+.btn-info {
+    width: 164px;
+    height: 41px;
+    background: var(--orange);
+    border: none;
+    font-family: 'HelveticaNeue';
+    font-size: var(--article);
+    color: var(--blanc);
+    line-height: 110%;
+    font-weight: 400;
 }
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: -1100px;
+    }
+
+
+.parent-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+.parent-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: -1320px;
+    }
+
+.parent-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin-top: -1560px;
+        }
+
+.parent-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: -1670px;
+    margin-bottom: -1190px;
+    }
+    
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 4; }
+
+    .div1::after {
+    content: '';
+    width: 0px;
+    height: 90%;
+    color: none;
+    border: 2px dashed var(--beige-foncee);
+    display: flex;
+    margin-top: 0px;
+    margin-left: 55%;
+    z-index: -1;
+} 
+
+.parent-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: var(--gris);
+    }
+
+        
+.div1-footer { grid-area: 1 / 2 / 2 / 3;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--header-title);
+    letter-spacing: 0.2em;
+    color: var(--beige);
+
+}
+.div2-footer { grid-area: 2 / 1 / 3 / 4;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%; }
+
+
+
+.div3-footer { grid-area: 3 / 2 / 4 / 3; 
+    text-align: center;
+    margin-left: -10%;
+    margin-right: -10%;
+    margin-top: -25%;
+}
+
+.btn-contact {
+    width: 164px;
+    height: 41px;
+    background: var(--gris);
+    border: none;        font-family: 'HelveticaNeue';
+    font-size: var(--article);
+    color: var(--blanc);
+    line-height: 110%;
+    font-weight: 400;
+    }
+
+.btn-billeterie {
+    width: 164px;
+    height: 41px;
+    background: var(--gris);
+    border: none;        font-family: 'HelveticaNeue';
+    font-size: var(--article);
+    color: var(--blanc);
+    line-height: 110%;
+    font-weight: 400;
+    margin-top: -5000px;
+    }
+    
+
+.expo button{
+    margin-left: 50%;
+    margin-top: 10%;
+}
+    
+
