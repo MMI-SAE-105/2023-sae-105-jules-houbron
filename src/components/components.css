@@ -236,3 +236,70 @@ header {
     margin-top: 30%;
     padding-bottom: 20%;
 }
+
+.my-3 img {
+    margin-top: 0px;
+    max-width: 80%;
+    border: solid 3px #E3CD8B;
+
+}
+
+.indic {
+    display:flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.imgs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.box {
+    position: relative;
+}
+
+.bouton {
+    position: absolute;
+    top: 50%;
+    box-sizing: content-box;
+    width: 100%;
+    display:flex; 
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.bouton button {
+    background-color: #E3CD8B;
+    border-radius: 0px;
+}
+
+.bg-color-success {
+    background-color: black;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+button {
+    background-color: #F0BE86;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.position-image {
+    display: flex;
+    justify-content: center;
+}
+
+.my-3 a {
+    display: flex;
+    justify-content: center;   
+}
