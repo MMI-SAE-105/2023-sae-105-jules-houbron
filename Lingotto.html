@@ -1,30 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Germano Celant</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
     <header>
         <h4 class="header-title">VAGABOND</h4>
-        <div class="nav-bar"></div>
+        <button aria-controls="mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+        >
+        <img src="public/img/BOUTON-MENU.svg" alt="">
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen"
+        x-transition.duration.800ms
+        class="menu"
+        >
+          <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">BILLETERIE</a></li>
+            <li><a href="#">ARTISTES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
     </header>
+    <section class="oeuvre">
     <h1>Lingotto</h1>
+    <div class="img-oeuvre">
     <img src="public/img/Lingotto.webp alt="Lingotto">
+    </div>
     <p>Lingotto a été créé à l'année où Merz a commencé à exposer avec d'autres artistes de l'arte povera, et les fagots de broussailles sont caractéristiques de l'utilisation de matériaux 
         modestes par le groupe. Un bloc de cire d'abeille posé sur une structure en acier évoque une barre d'or unique - 'lingotto' signifie 'lingot' en italien. Lingotto est également le 
         quartier de la ville de Turin où Merz était originaire et où se situait l'usine Fiat, un bâtiment moderne de couleur jaune où son père travaillait. Ces références disparates combinées 
         suggèrent des contrastes entre la pauvreté et le luxe, la vie rurale et urbaine.</p>
-    <a href="mario-merz.html">
-        <button class="btn-retour">RETOUR</button>
-    </a>
-    <footer>
-        <h1>VAGABOND</h1>
-        <H3>CONTACT</H3>
-        <H3>BILLETERIE</H3>
-        <p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
-    </footer>
-</body>
+        <div class="btn-retour">
+            <button><a href="alighieor-beotti.html">RETOUR</a></button>
+        </div>
+        </section>
+        <footer>
+            <div class="parent-footer">
+                <div class="div1-footer"><h1>VAGABOND</h1> </div>
+                <div class="div2-footer">
+                    <a href="contact.html">CONTACT</a> 
+                    <a href="">BILLETERIE</a>
+                </div>
+                <div class="div3-footer"><p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p> </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+    </html>
 </html>
