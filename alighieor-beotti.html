@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,59 +11,47 @@
 <body>
     <header>
         <h4 class="header-title">VAGABOND</h4>
-        <div class="nav-bar"></div>
+        <button aria-controls="mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+        >
+        <img src="public/img/BOUTON-MENU.svg" alt="">
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen"
+        x-transition.duration.800ms
+        class="menu"
+        >
+          <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">BILLETERIE</a></li>
+            <li><a href="#">ARTISTES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
     </header>
+    <section class="artiste">
+    <div class="img-artiste">
     <img src="public/img/alighiero-boetti.webp" alt="Alighiero Boetti">
+    </div>
     <article>
         <h3>ALIGHIERO BEOTTI</h3>
         <p>Alighiero Boetti était un artiste italien de l'arte povera qui est né en 1940 à Turin et qui est décédé en 1994 à Rome. Boetti était connu pour ses installations, ses performances et ses
             oeuvres sur papier, qui ont souvent exploré des thèmes tels que la langue, l'identité et la politique. Boetti a également été impliqué dans des projets de collaboration avec des 
             artistes et des artisans du Moyen-Orient et d'Afrique, et a été considéré comme l'un des principaux représentants de l'arte povera.</p>
     </article>
-    <div class="carrousel" x-data="{
-        hrefCourant: '#ecran-1',
-        }">
-        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
-            aria-label="slide précedant">
-            &lt;</button>
-        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
-            aria-label="slide
-                suivant">></button>
-        <div class="carrousel_parent-ecrans" x-ref="parent">
-        <a href="game-plan.html">
-            <div id="ecran-1" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/game-plan.webp" alt="Game Plan">
-                    <figcaption>Game Plan</figcaption>
-                </figure>
-        </a>
-            </div>
-            <div id="ecran-2" class="carrousel_ecran">
-        <a href="Lagnetti-colorati.html">
-                <figure>
-                    <img src="public/img/Legnetti-colorati.webp" alt="Lagnetti-colorati">
-                    <figcaption>Lagnetti-colorati</figcaption>
-                </figure>
-        </a>
-            </div>
-            <div id="ecran-3" class="carrousel_ecran">
-        <a href="Catasta.html">
-                <figure>
-                    <img src="public/img/Catasta.webp" alt="Catasta">
-                    <figcaption>Catasta</figcaption>
-                </figure>
-        </a>
-            </div>
-        </div>
+    <div class="btn-retour">
+        <button><a href="/">RETOUR</a></button>
     </div>
-    <a href="/">
-        <button class="btn-retour">RETOUR</button>
-    </a>
     <footer>
-        <h1>VAGABOND</h1>
-        <H3>CONTACT</H3>
-        <H3>BILLETERIE</H3>
-        <p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
+        <div class="parent-footer">
+            <div class="div1-footer"><h1>VAGABOND</h1> </div>
+            <div class="div2-footer">
+                <a href="contact.html">CONTACT</a> 
+                <a href="">BILLETERIE</a>
+            </div>
+            <div class="div3-footer"><p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p> </div>
+            </div>
+        </section>
     </footer>
 </body>
 </html>
