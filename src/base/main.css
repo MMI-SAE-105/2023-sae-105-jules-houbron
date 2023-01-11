@@ -162,3 +162,42 @@
     text-decoration: none;
     color: var(--blanc);
 }
+
+
+.contact {
+    background-color: var(--gris);
+    padding-top: 50px;
+}
+
+.contact h1 {
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--titre);
+    line-height: 110%;
+    color: var(--beige);
+    text-align: center;
+}
+
+.contact label{
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--sous-titre);
+    line-height: 110%;
+    color: var(--beige);
+    margin-left: 5%;
+}
+
+.contact textarea{
+    border: 3px solid var(--beige);
+    background-color: transparent;
+    height: 5em;
+    vertical-align: top;
+    width: 320px;
+    height: 90px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
