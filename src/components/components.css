@@ -158,21 +158,35 @@ header {
     font-size: var(--header-title);
     letter-spacing: 0.2em;
     color: var(--beige);
+    text-decoration: none;
 
 }
 .div2-footer { grid-area: 2 / 1 / 3 / 4;
     display: flex;
     justify-content: space-between;
     margin-left: 5%;
-    margin-right: 5%; }
+    margin-right: 5%;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--article);
+    color: var(--beige); }
 
-
+.div2-footer a {
+    text-decoration: none;
+    color: var(--beige);
+}
 
 .div3-footer { grid-area: 3 / 2 / 4 / 3; 
     text-align: center;
     margin-left: -10%;
     margin-right: -10%;
     margin-top: -25%;
+    font-family: 'HelveticaNeue';
+    font-size: var(--article);
+    margin-left: 5%;
+    margin-right: 5%;
+    color: var(--beige);
 }
 
 .btn-contact {
@@ -204,4 +218,21 @@ header {
     margin-top: 10%;
 }
     
+.btn-retour button {
+    width: 164px;
+    height: 41px;
+    background: var(--beige);
+    border: none;       
+    font-family: 'HelveticaNeue';
+    font-size: var(--article);
+    color: var(--blanc);
+    line-height: 110%;
+    font-weight: 400;
+}
 
+.btn-retour {
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+    padding-bottom: 20%;
+}

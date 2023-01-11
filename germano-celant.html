@@ -1,31 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Germano Celant</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
     <header>
         <h4 class="header-title">VAGABOND</h4>
-        <div class="nav-bar"></div>
+        <button aria-controls="mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header_menuBtn"
+        >
+        <img src="public/img/BOUTON-MENU.svg" alt="">
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen"
+        x-transition.duration.800ms
+        class="menu"
+        >
+          <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">BILLETERIE</a></li>
+            <li><a href="#">ARTISTES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
     </header>
+    <section class="artiste">
+        <div class="img-artiste">
     <img src="public/img/germano-celant.webp" alt="Germano-celant">
+        </div>
     <article>
         <h3>GERMANO CELANT</h3>
         <p>Germano Celant est un critique d'art et un théoricien de l'Arte Povera italien. Celant a été l'un des principaux promoteurs du mouvement de l'Arte Povera et a écrit de nombreux 
         articles et essais sur l'art contemporain, en particulier sur les artistes italiens. Il a également organisé de nombreuses expositions d'Arte Povera et a été directeur artistique 
         de la Biennale de Venise en 1986.</p>
     </article>
-    <a href="/">
-        <button class="btn-retour">RETOUR</button>
-    </a>
-    <footer>
-        <h1>VAGABOND</h1>
-        <H3>CONTACT</H3>
-        <H3>BILLETERIE</H3>
-        <p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
-    </footer>
+    <div class="btn-retour">
+        <button><a href="/">RETOUR</a></button>
+    </div>
+</section>
+<footer>
+    <div class="parent-footer">
+        <div class="div1-footer"><h1>VAGABOND</h1> </div>
+        <div class="div2-footer">
+            <a href="contact.html">CONTACT</a> 
+            <a href="">BILLETERIE</a>
+        </div>
+        <div class="div3-footer"><p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p> </div>
+        </div>
+</footer>
 </body>
 </html>

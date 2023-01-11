@@ -85,4 +85,50 @@
     font-size: var(--texte-footer);
 }
 
+.artiste {
+    background-color: var(--vert);
+}
+
+.artiste img {
+    width: 174px;
+    height: 174px;
+    margin-top: 80px;
+    border: 3px solid var(--beige-foncee);
+    border-radius: 90px;
+}
+
+.img-artiste {
+    display: flex;
+    justify-content: center;
+}
+
+.artiste h3 {
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--titre--artiste);
+    line-height: 110%;
+    letter-spacing: 0.1em;
+    color: var(--beige);
+    display: flex;
+    justify-content: center;
+}
+
+.artiste p {
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--article);
+    line-height: 110%;
+    color: var(--blanc);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.artiste a {
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+
 
