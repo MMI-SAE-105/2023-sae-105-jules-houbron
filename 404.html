@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERROR 404</title>
+<link rel="stylesheet" href="src/css/style.css">
+<script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+<body>
+<header>
+    <h4 class="header-title">VAGABOND</h4>
+    <button aria-controls="mainNav"
+    @click="menuIsOpen = ! menuIsOpen"
+    class="header_menuBtn"
+    >
+    <img src="public/img/BOUTON-MENU.svg" alt="">
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen"
+    x-transition.duration.800ms
+    class="menu"
+    >
+      <ul>
+        <li><a href="/">ACCUEIL</a></li>
+        <li><a href="#">BILLETERIE</a></li>
+        <li><a href="alighieor-beotti.html">ARTISTES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+</header>
+<section class="error">
+<h2>ERROR 404</h2>
+<p><span>page non trouvée</span> </p>
+
+<h3>Liens utiles</h3>
+<ul>
+    <li><a href="/">Accueil</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<h3><span>ARTE POVERA</span></h3>
+<p>L'arte povera est un mouvement artistique italien qui a émergé dans les années 1960 et qui a été caractérisé par l'utilisation de matériaux simples et courants dans la création 
+    d'oeuvres d'art. Le terme "arte povera" signifie "art pauvre" en italien, et fait référence à la volonté des artistes de cette mouvance de s'éloigner des matériaux traditionnels de l'art,
+    tels que la toile et la peinture, pour utiliser des éléments issus de la vie quotidienne, comme le bois, le papier, le verre, le fer et même la terre. Les artistes de l'arte povera 
+    ont également été influencés par des mouvements tels que le minimalisme et le conceptuelisme, et ont utilisé des performances et des installations pour créer des oeuvres qui questionnaient
+    les structures sociales et culturelles en place.</p>
+</section>
+<footer>
+    <div class="parent-footer">
+        <div class="div1-footer"><h1>VAGABOND</h1> </div>
+        <div class="div2-footer">
+            <a href="contact.html">CONTACT</a> 
+            <a href="">BILLETERIE</a>
+        </div>
+        <div class="div3-footer"><p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p> </div>
+        </div>
+    </section>
+</footer>
+</body>
+</html>
+</html>
