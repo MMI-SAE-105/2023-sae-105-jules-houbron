@@ -42,6 +42,43 @@
     <div class="btn-retour">
         <button><a href="/">RETOUR</a></button>
     </div>
+    <h3>Oeuvres de l'artiste</h3>
+    <div class="my-3" x-data="{ activeSlide: 1, slides: [1, 2, 3] }">
+        <div class="imgs">
+          <div class="position-image" x-show="activeSlide === 1">
+            <a href="game-plan.html">
+            <img src="public/img/game-plan.webp" alt="">
+            </a> 
+            <!-- Slide1 -->
+          </div>
+          <div class="position-image" x-show="activeSlide === 2">
+            <!-- Slide2 -->
+            <a href="catasta.html">
+            <img src="public/img/catasta.webp" alt="">
+            </a>
+          </div>
+          <div class="position-image" x-show="activeSlide === 3">
+            <!-- Slide3 -->
+            <a href="Lagnetti-colorati.html">
+            <img src="public/img/Legnetti-colorati.webp" alt="">
+        </a>
+          </div>
+          <!-- Bouton avant/après -->
+          <div class="bouton">
+            <button class="btn-avant" x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1">←</button>
+            <button class="btn-apres" x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1">→</button>
+          </div>
+        </div>
+        <!-- Indication -->
+        <div class="indic">
+        <template x-for="slide in slides" :key="slide">
+          <button class="btn-indic" :class="{
+              'bg-color-success': activeSlide === slide,
+              '': activeSlide !== slide
+            }" x-on:click="activeSlide = slide"></button>
+        </template>
+        </div>
+      </div>
     <footer>
         <div class="parent-footer">
             <div class="div1-footer"><h1>VAGABOND</h1> </div>

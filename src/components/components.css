@@ -33,6 +33,16 @@ header {
     letter-spacing: 0.2em;
 }
 
+.menu a {
+    text-decoration: none;
+    color: var(--beige);
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--texte-footer);
+}
+
+
 
 .menu {
     position: fixed;
@@ -279,7 +289,7 @@ header {
 }
 
 .bg-color-success {
-    background-color: black;
+    background-color: var(--orange);
     border: none;
     padding: 10px 10px;
     cursor: pointer;
